@@ -83,14 +83,5 @@ namespace UserCRUD.Models
         {
             _dataClasses1DataContext.SubmitChanges();
         }
-
-        public void Dispose()
-        {
-            if (_dataClasses1DataContext != null)
-            {
-                _dataClasses1DataContext.Dispose();
-            }
-        }
-
     }
 }

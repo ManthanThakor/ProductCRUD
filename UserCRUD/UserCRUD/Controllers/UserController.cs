@@ -59,13 +59,6 @@ namespace UserCRUD.Controllers
             return RedirectToAction("Index");
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                _userRepository.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+
     }
 }
