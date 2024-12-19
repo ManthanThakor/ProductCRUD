@@ -1,7 +1,30 @@
-﻿
+﻿@model UserCRUD.Models.UserModel
+
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Create User";
 }
+<link href="~/Content/styles/StyleSheet4.css" rel="stylesheet" />
 
-<h2>Create</h2>
+<div class="my-5 container">
+    <h2 class="my-4 text-uppercase text-center">Create New User</h2>
 
+    @using (Html.BeginForm())
+    {
+        <div class="form-group mb-4">
+            @Html.LabelFor(model => model.Name, new { @class = "form-label" })
+            @Html.TextBoxFor(model => model.Name, new { @class = "form-control form-control-lg", placeholder = "Enter Name" })
+            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group mb-4">
+            @Html.LabelFor(model => model.Address, new { @class = "form-label" })
+            @Html.TextBoxFor(model => model.Address, new { @class = "form-control form-control-lg", placeholder = "Enter Address" })
+            @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="d-flex gap-4">
+            <button type="submit" class="btn btn-success btn-lg shadow-sm">Create</button>
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-danger btn-lg shadow-sm" })
+        </div>
+    }
+</div>

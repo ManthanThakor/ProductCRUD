@@ -1,33 +1,64 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<link href="~/Content/styles/StyleSheet1.css" rel="stylesheet" />
 
 <main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
+    <section class="intro-section text-center" aria-labelledby="introTitle">
+        <h1 id="introTitle" class="display-4">Welcome to UserCrud</h1>
+        <p class="lead">A simple and powerful web application to manage users with ASP.NET MVC</p>
+        <a href="@Url.Action("Index", "User")" class="btn btn-primary btn-lg btn-animated">View All Users <i class="fas fa-users"></i></a>
     </section>
 
-    <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </section>
+    <div class="my-5 container">
+        <div class="row">
+            <section class="col-md-4 mb-4 fadeInUp" aria-labelledby="userIndexTitle">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h2 id="userIndexTitle" class="card-title">Manage Users</h2>
+                        <p class="card-text">Easily view, edit, or delete existing users in the system. All your user data in one place.</p>
+                        <a href="@Url.Action("Index", "User")" class="btn btn-info btn-lg">
+                            <i class="fas fa-list"></i> View All Users
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="col-md-4 mb-4 fadeInUp" aria-labelledby="createUserTitle">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h2 id="createUserTitle" class="card-title">Create New User</h2>
+                        <p class="card-text">Add new users to the system with just a few clicks. It's easy and intuitive.</p>
+                        <a href="@Url.Action("Create", "User")" class="btn btn-success btn-lg">
+                            <i class="fas fa-user-plus"></i> Add User
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="col-md-4 mb-4 fadeInUp" aria-labelledby="featuresTitle">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h2 id="featuresTitle" class="card-title">Powerful Features</h2>
+                        <p class="card-text">Built with ASP.NET MVC, offering full CRUD operations for users and a responsive design.</p>
+                        <a href="https://go.microsoft.com/fwlink/?LinkId=301865" target="_blank" class="btn btn-warning btn-lg">
+                            <i class="fas fa-cogs"></i> Explore Features
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
+
+    <!-- Additional Section for Feedback -->
+    <section class="feedback-section my-5 text-center" aria-labelledby="feedbackTitle">
+        <h2 id="feedbackTitle">We value your feedback!</h2>
+        <p>Share your thoughts and let us know how we can improve the UserCrud application. Your opinion matters!</p>
+        <a href="mailto:support@usercrud.com" class="btn btn-danger btn-lg">
+            <i class="fas fa-comments"></i> Contact Us
+        </a>
+    </section>
 </main>
+
+
+

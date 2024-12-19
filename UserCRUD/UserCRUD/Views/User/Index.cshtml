@@ -3,31 +3,41 @@
 @{
     ViewBag.Title = "Users List";
 }
+<link href="~/Content/styles/StyleSheet2.css" rel="stylesheet" />
 
-<h2>Users List</h2>
+<div class="my-5 container">
+    <h2 class="my-4 text-uppercase text-center">Users List</h2>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Address</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var user in Model)
-        {
-            <tr>
-                <td>@user.Name</td>
-                <td>@user.Address</td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = user.Id }) |
-                    @Html.ActionLink("Delete", "DeleteConfirmed", new { id = user.Id }, new { @class = "delete-button" })
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+    <div class="table-responsive">
+        <table class="table-hover table-striped table-bordered table rounded shadow-lg">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model)
+                {
+                    <tr>
+                        <td>@user.Name</td>
+                        <td>@user.Address</td>
+                        <td class="d-flex justify-content-center">
+                            @Html.ActionLink("Edit", "Edit", new { id = user.Id }, new { @class = "btn btn-warning btn-sm mx-1" }) |
+                            @using (Html.BeginForm("DeleteConfirmed", "User", new { id = user.Id }, FormMethod.Post))
+                            {
+                                <button type="submit" class="btn btn-danger btn-sm mx-1">Delete</button>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 
-<!-- Navigate button to create a new user -->
-<a href="@Url.Action("Create", "User")" class="btn btn-primary">Navigate to Create User</a>
+    <!-- Navigate button to create a new user -->
+    <div class="my-4 text-center">
+        <a href="@Url.Action("Create", "User")" class="btn btn-primary btn-lg shadow-lg">Navigate to Create User</a>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+﻿/* Form control styling */
+.form-control {
+    font-size: 16px;
+    padding: 12px;
+}
+
+/* Label styling */
+.form-label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Button hover effect */
+.btn:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Button focus effect */
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Add shadow to buttons */
+.btn-lg {
+    padding: 14px 32px;
+    font-size: 18px;
+    border-radius: 25px;
+}
+
+/* Validation messages */
+.text-danger {
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* Container styling */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Back to List button styling */
+.btn-danger {
+    background-color: #dc3545;
+    border-radius: 25px;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border-radius: 25px;
+}

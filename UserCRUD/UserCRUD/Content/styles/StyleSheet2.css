@@ -1,0 +1,59 @@
+﻿/* Style for the table */
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 16px;
+    padding: 15px;
+}
+
+/* Header styling */
+.table th {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Button hover effects */
+.btn:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+
+/* Button focus effect */
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Table row hover effect */
+.table tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Create button styling */
+.btn-primary {
+    padding: 12px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+    .btn-primary:hover {
+        background-color: #007bff;
+        transform: scale(1.05);
+    }
+
+.btn-warning, .btn-danger {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+}
+
+    .btn-warning:hover, .btn-danger:hover {
+        transform: scale(1.05);
+    }
+
+/* Card or box shadow effect for the "Create" button */
+.shadow-lg {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
