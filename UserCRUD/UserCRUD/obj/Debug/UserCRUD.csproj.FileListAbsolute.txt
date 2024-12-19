@@ -1,0 +1,2 @@
+E:\manthan\UserCrud\UserCRUD\UserCRUD\UserCRUD\obj\Debug\UserCRUD.csproj.AssemblyReference.cache
+E:\manthan\UserCrud\UserCRUD\UserCRUD\UserCRUD\obj\Debug\UserCRUD.csproj.CoreCompileInputs.cache

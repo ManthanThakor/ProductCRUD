@@ -1,0 +1,36 @@
+﻿@model IEnumerable<UserCRUD.Models.UserModel>
+
+@{
+    ViewBag.Title = "Users List";
+}
+
+<h2>Users List</h2>
+
+<p>
+    <a href="@Url.Action("Create")" class="btn btn-primary">Create New User</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Id</td>
+                <td>@user.Name</td>
+                <td>@user.Address</td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = user.Id })" class="btn btn-warning">Edit</a>
+                    <a href="@Url.Action("Delete", new { id = user.Id })" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
