@@ -1,1 +1,33 @@
-﻿=
+﻿@model IEnumerable<UserCRUD.Models.UserModel>
+
+@{
+    ViewBag.Title = "Users List";
+}
+
+<h2>Users List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Name</td>
+                <td>@user.Address</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = user.Id }) |
+                    @Html.ActionLink("Delete", "DeleteConfirmed", new { id = user.Id }, new { @class = "delete-button" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Navigate button to create a new user -->
+<a href="@Url.Action("Create", "User")" class="btn btn-primary">Navigate to Create User</a>
